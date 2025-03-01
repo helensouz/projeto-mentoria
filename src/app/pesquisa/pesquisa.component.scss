@@ -1,0 +1,30 @@
+.container{
+  background-color: #F0F0F0;
+  margin: 20px;
+}
+
+
+form{
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+
+
+}
+
+
+.mat-mdc-form-field{
+  padding: 15px;
+}
+
+
+.example-button-row{
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.example-button-row button{
+  margin: 5px;
+}
