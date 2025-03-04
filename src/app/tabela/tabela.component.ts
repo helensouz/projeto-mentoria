@@ -1,24 +1,26 @@
-import { Component } from '@angular/core';
-import {MatTableModule} from '@angular/material/table';
+import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
+import {MatTable, MatTableModule} from '@angular/material/table';
 
 export interface PeriodicElement {
-  nome: string;
+  name: string;
   position: number;
-  cargo: string;
+  weight: number;
+  symbol: string;
 
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {position: 1, nome: 'Hydrogen', cargo: 'Dev front end'},
-  {position: 2, nome: 'Helium', cargo: 'Dev back end'},
-  {position: 3, nome: 'Lithium', cargo: 'Dev front end'},
-  {position: 4, nome: 'Beryllium', cargo: 'Dev back end'},
-  {position: 5, nome: 'Boron', cargo: 'DevOps'},
-  {position: 6, nome: 'Carbon', cargo: 'Dev front end'},
-  {position: 7, nome: 'Nitrogen', cargo: 'DevOps'},
-  {position: 8, nome: 'Oxygen', cargo: 'Dev front end'},
-  {position: 9, nome: 'Fluorine', cargo: 'DevOps'},
-  {position: 10, nome: 'Neon', cargo: 'DevOps'},
+  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
+  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
+  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
+  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
+  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
+  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
+  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
+  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
+  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+  {position: 11, name: 'Cobalt', weight: 20.1797, symbol: 'Co'},
 ];
 
 
@@ -31,7 +33,32 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 
 
-export class TabelaComponent {
-  displayedColumns: string[] = ['position', 'nome', 'cargo'];
-  dataSource = ELEMENT_DATA;
+export class TabelaComponent implements OnChanges{
+
+
+  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+  dataSource = [...ELEMENT_DATA];
+
+
+  @Input() dadosRecebidosPeloPai!: PeriodicElement
+
+
+
+  @ViewChild(MatTable) table!: MatTable<PeriodicElement>;
+
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes["dadosRecebidosPeloPai"] && changes["dadosRecebidosPeloPai"].currentValue){
+      console.log(changes["dadosRecebidosPeloPai"].currentValue, "console do push")
+      this.dataSource.push(changes["dadosRecebidosPeloPai"].currentValue)
+      const temp = this.dataSource
+
+      this.dataSource = [...temp]
+
+
+
+    }
+
+
+  }
 }

@@ -1,8 +1,5 @@
-<app-pesquisa></app-pesquisa>
-<app-tabela></app-tabela>
+<app-pesquisa (objetoEnviadosParaTabela)="recebeDadosPesquisa($event)" ></app-pesquisa>
+<app-tabela [dadosRecebidosPeloPai]="dadosFilhoPesquisa"></app-tabela>
 
-
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@angular/material@15.2.9/prebuilt-themes/indigo-pink.css">
 
 
