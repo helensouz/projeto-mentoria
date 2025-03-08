@@ -49,3 +49,8 @@ Campos de pesquisa individuais em cada coluna para buscas mais precisas.
 10. Modo Escuro e Responsividade
 Adapte a tabela para telas menores.
 Adicione suporte ao modo escuro para melhor acessibilidade.
+
+
+Criacao de servico para salvar os dados 
+- salvar em um arquivo json
+- Adicionar um campo para todas vez que procurar, ele busque se ja existe um elemento igual

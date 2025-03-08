@@ -1,0 +1,98 @@
+ {
+  "Table": [
+  {
+    "id": 1,
+    "Position": 96,
+    "Name": "Curium",
+    "weight": 247,
+    "symbol": "CM"
+  },
+  {
+    "id": 2,
+    "Position": 97,
+    "Name": "Berkelium",
+    "weight": 247,
+    "symbol": "BK"
+  },
+  {
+    "id": 3,
+    "Position": 98,
+    "Name": "Californium",
+    "weight": 251,
+    "symbol": "CF"
+  },
+  {
+    "id": 4,
+    "Position": 99,
+    "Name": "Einsteinium",
+    "weight": 252,
+    "symbol": "ES"
+  },
+  {
+    "id": 5,
+    "Position": 100,
+    "Name": "Fermium",
+    "weight": 257,
+    "symbol": "FM"
+  },
+  {
+    "id": 6,
+    "Position": 101,
+    "Name": "Mendelevium",
+    "weight": 258,
+    "symbol": "MD"
+  },
+  {
+    "id": 7,
+    "Position": 102,
+    "Name": "Nobelium",
+    "weight": 259,
+    "symbol": "NO"
+  },
+  {
+    "id": 8,
+    "Position": 103,
+    "Name": "Lawrencium",
+    "weight": 262,
+    "symbol": "LR"
+  },
+  {
+    "id": 9,
+    "Position": 104,
+    "Name": "Rutherfordium",
+    "weight": 267,
+    "symbol": "RF"
+  },
+  {
+    "id": 10,
+    "Position": 105,
+    "Name": "Dubnium",
+    "weight": 268,
+    "symbol": "DB"
+  },
+  {
+    "id": 11,
+    "Position": 106,
+    "Name": "Seaborgium",
+    "weight": 271,
+    "symbol": "SG"
+  },
+  {
+    "id": 12,
+    "Position": 107,
+    "Name": "Bohrium",
+    "weight": 270,
+    "symbol": "BH"
+  },
+  {
+    "id": 13,
+    "Position": 108,
+    "Name": "Hassium",
+    "weight": 277,
+    "symbol": "HS"
+  }
+
+
+  ]
+}
+
