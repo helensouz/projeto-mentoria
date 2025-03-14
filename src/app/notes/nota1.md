@@ -1,56 +1,38 @@
-pesquisa - component
-tabela - component
-
-insercao de dados - 
-
-
-formsModule 
-reactive forms
-
-NgForms
-
-'position', 'name', 'weight', 'symbol'
-
-
-
-    this.objetoEnviadosParaTabela.emit({ name: this.nameInput, position: +this.positionInput, symbol: this.symbolInput, weight: +this.weightInput})
-
-
-
-spread
-
-
-Filtros Avançados
-Permita que os usuários filtrem por múltiplas colunas (exemplo: nome, data, status).
-Adicione um filtro por intervalo de datas.
-Implemente um dropdown para selecionar categorias ou tipos de dados.
-2. Ordenação Personalizada
-Adicione a opção de ordenar os dados por qualquer coluna (ascendente e descendente).
-Permita salvar a ordem preferida do usuário.
-3. Paginação Inteligente
-Utilize paginação para melhorar a performance ao exibir grandes volumes de dados.
-Adicione um seletor de quantidade de itens por página (10, 25, 50, 100).
-Mostre um indicador de quantos registros foram encontrados.
-4. Exportação de Dados
-Permita exportar a tabela para CSV, Excel ou PDF.
-Adicione a opção de imprimir a tabela formatada.
-5. Destaque de Texto Pesquisado
-Quando o usuário faz uma busca, destaque o termo encontrado na tabela.
-6. Atualização em Tempo Real
-Use WebSockets ou polling para atualizar os dados automaticamente sem precisar recarregar a página.
-7. Edição Inline
-Permita editar os dados diretamente na tabela sem abrir um modal.
-8. Ações Rápidas
-Botões para excluir, editar ou visualizar detalhes ao lado de cada linha.
-Dropdown para ações em lote (excluir vários registros de uma vez).
-9. Pesquisa Global e por Coluna
-Um campo de pesquisa global que busca em todas as colunas.
-Campos de pesquisa individuais em cada coluna para buscas mais precisas.
-10. Modo Escuro e Responsividade
-Adapte a tabela para telas menores.
-Adicione suporte ao modo escuro para melhor acessibilidade.
-
-
-Criacao de servico para salvar os dados 
-- salvar em um arquivo json
-- Adicionar um campo para todas vez que procurar, ele busque se ja existe um elemento igual
+ Features e Conceitos Angular Utilizados
+1️⃣ Autenticação de Usuário (Login/Register)
+Conceitos: Forms, Validation, Services and HTTP, Routing and Guards
+Detalhes:
+Formulários reativos com ngForms para login e registro.
+Validação de campos (e.g., email válido, senha com no mínimo 8 caracteres).
+Serviço de autenticação consumindo uma API fake com HttpClient.
+Guards para proteger rotas (somente usuários autenticados acessam determinadas páginas).
+2️⃣ CRUD de Cursos
+Conceitos: Forms, Inputs, Validation, Services and HTTP, Event Binding, Lifecycle Hooks
+Detalhes:
+Listagem de cursos consumida de uma API.
+Cadastro/Edição de cursos com formulário reativo (FormGroup, FormControl).
+Botão de deletar curso com Event Binding.
+Uso do ngOnInit() e ngOnDestroy() para inicializar e limpar assinaturas da API.
+3️⃣ Cadastro de Alunos e Matrícula em Cursos
+Conceitos: Forms, Validation, Directives, Routing and Guards, Lifecycle Hooks
+Detalhes:
+Formulário com inputs para cadastrar alunos.
+Validações personalizadas via diretivas (Directives).
+Serviço para buscar cursos disponíveis via HTTP.
+Proteção de rota para impedir alunos não autenticados de se matricularem (Guards).
+4️⃣ Dashboard com Estatísticas (State Management com NgRx)
+Conceitos: @ngrx, State Management
+Detalhes:
+Exibição de gráficos sobre quantidade de alunos, cursos ativos, etc.
+Gerenciamento de estado global dos cursos e alunos via NgRx Store.
+Uso de Actions, Reducers e Effects para atualizar os dados no frontend.
+5️⃣ Testes Unitários e de Integração (Jasmine)
+Conceitos: Jasmine
+Detalhes:
+Testes unitários para os serviços (Services) e componentes (Components).
+Testes de integração para garantir que chamadas HTTP retornem os dados esperados.
+🌟 Possíveis Expansões
+Pagamento de cursos.
+Chat entre alunos e professores.
+Upload de arquivos (certificados, PDFs de cursos).
+Esse projeto é bem completo e cobre todos os conceitos que você quer praticar. O que acha?
